@@ -95,3 +95,16 @@ typedef enum {
     AM_A16_R,    // store register into memory at 16-bit immediate address
     AM_R_A16     // load from memory at 16-bit immediate address into register
 } addr_mode;
+// for jump if not zero, if zero, if not carry, if carry
+typedef enum {
+    CT_NONE, CT_NZ, CT_Z, CT_NC, CT_C
+} cond_type;
+
+typdef struct  {
+    in_type type;
+    addr_mode mode;
+    reg_type reg1;
+    reg_type reg2;
+    cond_type cond;
+    u8 param;
+} instruction;
