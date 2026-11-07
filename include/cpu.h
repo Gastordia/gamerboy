@@ -18,8 +18,9 @@ typdef struct {
 
 typdef struct{
     cpu_registers regs;
-    u16 current_fetch;
+    u16 fetched_data;
     u16 mem_dest;
+    bool destination_is_memory;
     u8 current_opcode;
     instruction current_instruction;
     bool halted;

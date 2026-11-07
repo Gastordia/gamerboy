@@ -46,3 +46,7 @@ int emu_run(int argc, char **argv){
     }
     return 0;
 }
+
+void emu_cyle(int cycle){
+    
+}
